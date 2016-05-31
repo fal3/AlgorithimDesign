@@ -22,22 +22,20 @@ func sequentialSearch() {
 
 sequentialSearch()
 
-var list = [1,3,5,6,7,8]
+var list = [1,3,5,6,7,8,9,10,12,14,51]
 print(list)
+
+//binary search algorithim swift 
 
 func binarySearch(sorted: [Int], x: Int) {
     var lowerBound = 1
     var upperBound = sorted.count
-    
-    
-    
-    
     var found = false
     
     while !found {
         if upperBound < lowerBound {
             print("X does not exist")
-            found = true
+            break
         }
         let midPoint = lowerBound + ( upperBound + lowerBound ) / 2
         if x > sorted[midPoint] {
@@ -53,9 +51,17 @@ func binarySearch(sorted: [Int], x: Int) {
     
 }
 
-
-
-
 binarySearch(list, x: 7)
+
+
+func fibo(n: Int) -> Int {
+    if n <= 1 {
+        return n
+    } else {
+        return fibo(n-1) + fibo(n-2)
+    }
+}
+
+
 
 
