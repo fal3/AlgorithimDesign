@@ -62,6 +62,6 @@ func fibo(n: Int) -> Int {
     }
 }
 
-
+fibo(7)
 
 
